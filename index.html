@@ -2,31 +2,57 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>CryBaby - Spotify x Death Note</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryBaby | LowLight</title>
     <style>
-        body { background-color: #0b0b0b; color: #e0e0e0; font-family: 'Courier New', monospace; padding: 20px; }
-        h1 { color: #ff4d4d; border-bottom: 2px solid #ff4d4d; padding-bottom: 10px; }
-        .track { margin-bottom: 20px; border-left: 3px solid #444; padding-left: 15px; }
-        .character { font-weight: bold; color: #ff4d4d; }
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            display: flex; flex-direction: column; align-items: center;
+            margin: 0; padding: 40px 20px;
+        }
+        .container { max-width: 600px; width: 100%; }
+        h1 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 10px; color: #ff3333; text-transform: uppercase; }
+        .description { color: #888; margin-bottom: 40px; line-height: 1.6; }
+        
+        /* Карточка трека в стиле Тильды */
+        .track-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            transition: 0.3s;
+        }
+        .track-card:hover { border-color: #ff3333; transform: translateY(-5px); }
+        .character-tag { 
+            display: inline-block; background: #ff3333; color: black; 
+            padding: 2px 8px; font-size: 12px; font-weight: bold; 
+            border-radius: 4px; margin-bottom: 10px; 
+        }
+        .track-name { font-size: 1.2rem; margin: 5px 0; font-weight: bold; }
+        
+        /* Плеер Spotify */
+        iframe { border-radius: 12px; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <h1>CryBaby: Sound of the Shadows</h1>
-    <p>spotify playlist for those who want to relax and luv death note</p>
+    <div class="container">
+        <h1>CryBaby</h1>
+        <p class="description">spotify playlist for those who want to relax and luv death note. <br>Created by yagamilight-kira.</p>
 
-    <div class="track">
-        <p><span class="character">L (Эл):</span> я ебаный гений — LilSemmi, 5mewmet</p>
-        <p><i>Вайб абсолютной дедукции и холодного разума.</i></p>
-    </div>
+        <div class="track-card">
+            <span class="character-tag">L</span>
+            <div class="track-name">я ебаный гений — 5mewmet</div>
+            <iframe src="https://open.spotify.com/embed/track/303I2K7K9j9J8f8F8f8F8f" width="100%" height="80" frameBorder="0" allow="encrypted-media"></iframe>
+        </div>
 
-    <div class="track">
-        <p><span class="character">Лайт:</span> P*RNSTAR — Nessa Barrett</p>
-        <p><i>Эстетика превосходства и безупречного плана.</i></p>
-    </div>
-
-    <div class="track">
-        <p><span class="character">Миса:</span> ParisLove — FORTUNA 812</p>
-        <p><i>Слепая преданность и хаос чувств.</i></p>
+        <div class="track-card">
+            <span class="character-tag">LIGHT</span>
+            <div class="track-name">P*RNSTAR — Nessa Barrett</div>
+            <iframe src="https://open.spotify.com/embed/track/5uCms7U3X6C7G8G8G8G8G" width="100%" height="80" frameBorder="0" allow="encrypted-media"></iframe>
+        </div>
     </div>
 </body>
 </html>
